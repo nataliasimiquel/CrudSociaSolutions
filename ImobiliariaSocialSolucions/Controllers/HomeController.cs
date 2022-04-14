@@ -21,6 +21,7 @@ namespace ImobiliariaSocialSolucions.Controllers
         {
             return View();
         }
+        public IActionResult Excluir() => View();
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

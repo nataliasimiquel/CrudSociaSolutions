@@ -12,15 +12,19 @@ namespace ImobiliariaSocialSolucions.Controllers
 
         public IActionResult Index()
         {
-            ClienteModel cliente = new ClienteModel();
-
-            cliente.Nome = "Natalia";
-
-            cliente.Email = "Nat@NAT@nat";
-
-            cliente.CPF = "000.000.000-00";
 
             return View();
         }
+       
+        public IActionResult Editar()
+        {
+            return View();
+        }
+        public IActionResult Excluir()
+        {
+            return View();
+        }
+
+
     }
 }

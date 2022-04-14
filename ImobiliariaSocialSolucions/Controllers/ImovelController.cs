@@ -18,7 +18,17 @@ namespace ImobiliariaSocialSolucions.Controllers
 
             return View(imovel);
         }
+        public IActionResult Editar()
+        {
+           
+            return View();
+        }
+        public IActionResult Excluir()
+        {
 
-       
+            return View();
+        }
+
+
     }
 }

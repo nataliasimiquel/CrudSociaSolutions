@@ -1,70 +1,119 @@
-﻿@model ClienteModel
-@{
+﻿@{
     ViewData["Title"] = "Pagina Inicial";
 }
 
 <div class="text-center">
     <h1 class="display-4">Imobiliaria Social Solutions</h1>
-    <p>Sistema de Controle de Imovéis</a>.</p>
+    <p>Sistema de Controle de Imovéis</p>
 </div>
 <table class="table table-success table-striped">
     <h1 class="display-4">Clientes</h1>
+    <p class="nav-item">
+        <a class="btn btn-primary" asp-area="" asp-controller="Cliente" asp-action="Index">Novo Cliente</a>
+
+    </p>
     <thead>
         <tr>
             <th scope="col">Status Cliente</th>
             <th scope="col">Nome</th>
             <th scope="col">Email</th>
             <th scope="col">CPF</th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row">1</th>
-            <td>Natl</td>
-            <td>Otto</td>
-            <td>mdo</td>
+            <th scope="row">Ativo</th>
+            <td>Natalia Simiquel</td>
+            <td>nsimiquel@nat</td>
+            <td>000.000.000-10</td>
+            <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-primary" role= "button" asp-controller="Home" asp-action="Privacy">Editar</a>
+                        <a class="btn btn-danger" role= "button" asp-controller="Cliente" asp-action="Excluir">Excluir</a>
+                    </div>
+            </td>
         </tr>
         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
+            <th scope="row">Inativo</th>
+            <td>Maria</td>
+            <td>maria@maria</td>
+            <td>000.000.000-10</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-primary" role="button" asp-controller="Home" asp-action="Privacy">Editar</a>
+                    <a class="btn btn-danger" asp-controller="Cliente" asp-action="Excluir">Excluir</a>
+                </div>
+            </td>
         </tr>
         <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>twitter</td>
+            <th scope="row">Ativo</th>
+            <td>José </td>
+            <td>Jose@josé </td>
+            <td>000.000.000-10</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-primary" role="button" asp-controller="Home" asp-action="Privacy">Editar</a>
+                    <a class="btn btn-danger" role="button" asp-controller="Cliente" asp-action="Excluir">Excluir</a>
+                </div>
+            </td>
         </tr>
     </tbody>
 </table>
 
 <table class="table table-success table-striped">
     <h1 class="display-4">Imóveis</h1>
+    <div>
+        <p class="nav-item">
+            <a class="btn btn-primary" asp-area="" asp-controller="Imovel" asp-action="Index">Novo Imóvel</a>
+        </p>
+    </div>
     <thead>
         <tr>
             <th scope="col">Status Imóvel</th>
             <th scope="col">Tipo de Negócio</th>
             <th scope="col">Valor do imóvel</th>
             <th scope="col">Descrição</th>
+            <th scope="col"></th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>mdo</td>
+            <th scope="row">Ativo</th>
+            <td>Venda</td>
+            <td>R$1.520.000,00</td>
+            <td>Imóvel de luxo</td>
+            <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-primary" role="button" asp-controller="Imovel" asp-action="Editar">Editar</a>
+                        <a class="btn btn-danger" role="button" asp-controller="Imovel" asp-action="Excluir">Excluir</a>
+                    </div>
+            </td>
+
         </tr>
         <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>fat</td>
+            <th scope="row">Inativo</th>
+            <td>Aluguel</td>
+            <td>R$1.520.000,00</td>
+            <td>Imóvel de luxo</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-primary" role="button" asp-controller="Imovel" asp-action="Editar">Editar</a>
+                    <a class="btn btn-danger" role="button" asp-controller="Imovel" asp-action="Excluir">Excluir</a>
+                </div>
+            </td>
         </tr>
         <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>twitter</td>
+            <th scope="row">Inativo</th>
+            <td>Aluguel</td>
+            <td>R$520.000,00</td>
+            <td>Imóvel médio padrão</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a class="btn btn-primary" role="button" asp-controller="Imovel" asp-action="Editar">Editar</a>
+                    <a class="btn btn-danger" role="button" asp-controller="Imovel" asp-action="Excluir">Excluir</a>
+                </div>
+            </td>
         </tr>
     </tbody>
 </table>
