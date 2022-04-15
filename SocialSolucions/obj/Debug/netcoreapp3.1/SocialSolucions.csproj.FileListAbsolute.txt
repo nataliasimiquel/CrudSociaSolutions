@@ -1109,3 +1109,4 @@ C:\Users\Natalia Simiquel\Desktop\crud\CrudSociaSolutions\SocialSolucions\obj\De
 C:\Users\Natalia Simiquel\Desktop\crud\CrudSociaSolutions\SocialSolucions\obj\Debug\netcoreapp3.1\SocialSolucions.pdb
 C:\Users\Natalia Simiquel\Desktop\crud\CrudSociaSolutions\SocialSolucions\obj\Debug\netcoreapp3.1\SocialSolucions.genruntimeconfig.cache
 C:\Users\Natalia Simiquel\Desktop\crud\CrudSociaSolutions\SocialSolucions\obj\Debug\netcoreapp3.1\Razor\Views\Cliente\Index.cshtml.g.cs
+C:\Users\Natalia Simiquel\Desktop\crud\CrudSociaSolutions\SocialSolucions\obj\Debug\netcoreapp3.1\Razor\Views\Imovel\Index.cshtml.g.cs

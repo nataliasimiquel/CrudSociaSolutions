@@ -14,5 +14,7 @@ namespace SocialSolucions.Data
         }
 
     public DbSet<ClienteModel> Cliente { get; set; }
+    public DbSet<ImovelModel> Imovel { get; set; }
+
     }
 }
