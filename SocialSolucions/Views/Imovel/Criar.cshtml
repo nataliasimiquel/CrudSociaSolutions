@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Novo Imovel";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar novo Imóvel</h1>
+    <p>Sistema de Controle de Imovéis</a>.</p>
+</div>
+<form>
+    <div class="mb-3">
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>Imóvel Ativo</option>
+            <option value="1">Ativo</option>
+            <option value="2">Inativo</option>
+        </select>
+    </div>
+    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <option selected>Tipo de Negócio</option>
+        <option value="1">Venda</option>
+        <option value="2">Aluguel</option>
+    </select>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Valor do imóvel</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Descrição</label>
+        <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>
