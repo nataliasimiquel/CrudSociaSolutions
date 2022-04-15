@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SocialSolucions.Models;
+using SocialSolucions.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,11 @@ namespace SocialSolucions.Controllers
 {
     public class ClienteController : Controller
     {
+        private readonly IClienteRepositorio _clienteRepositorio;
+        public ClienteController(IClienteRepositorio clienteRepositorio)
+        {
+            _clienteRepositorio = clienteRepositorio;
+        }
         public IActionResult Index()
         {
             return View();
@@ -23,6 +30,14 @@ namespace SocialSolucions.Controllers
         public IActionResult Excluir()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Criar(ClienteModel cliente)
+        {
+            _clienteRepositorio.Adicionar(cliente);
+
+            return RedirectToAction("Index");
         }
     }
 }

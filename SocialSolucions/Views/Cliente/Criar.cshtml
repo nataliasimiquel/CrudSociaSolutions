@@ -1,4 +1,5 @@
-﻿@{
+﻿@model ClienteModel
+@{
     ViewData["Title"] = "Novo Cliente";
 }
 
@@ -6,23 +7,23 @@
     <h1 class="display-4">Adicionar novo Cliente</h1>
     <p>Sistema de Controle de Imovéis</p>
 </div>
-<form>
-    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+<form asp-controller="Cliente" asp-action="Criar" method="post">
+    <select type="text" asp-for="Status" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
         <option selected>Cliente Ativo</option>
         <option value="1">Ativo</option>
         <option value="2">Inativo</option>
     </select>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Nome</label>
-        <input class="form-control" id="exampleInputPassword1">
+        <input type="text" asp-for="Nome" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Email</label>
-        <input class="form-control" id="exampleInputPassword1">
+        <input type="text" asp-for="Email" class="form-control" id="exampleInputPassword1">
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">CPF</label>
-        <input class="form-control" id="exampleInputPassword1">
+        <input type="text" asp-for="CPF" class="form-control" id="exampleInputPassword1">
     </div>
 
     <button type="submit" class="btn btn-primary btn-block">Adicionar</button>
