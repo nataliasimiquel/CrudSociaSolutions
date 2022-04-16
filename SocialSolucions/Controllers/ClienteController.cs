@@ -23,9 +23,12 @@ namespace SocialSolucions.Controllers
         {
             return View();
         }
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+            ClienteModel cliente =
+            _clienteRepositorio.ListarPorId(id);
+
+            return View(cliente);
         }
         public IActionResult Excluir()
         {
@@ -36,6 +39,14 @@ namespace SocialSolucions.Controllers
         public IActionResult Criar(ClienteModel cliente)
         {
             _clienteRepositorio.Adicionar(cliente);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Editar (ClienteModel cliente)
+        {
+            _clienteRepositorio.Editar(cliente);
 
             return RedirectToAction("Index");
         }
