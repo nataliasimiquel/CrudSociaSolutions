@@ -62,5 +62,17 @@ namespace SocialSolucions.Repositorio
 
             throw new NotImplementedException();
         }
+
+        public bool ExcluirConfirmacao(int id)
+        {
+            ClienteModel clienteDB = ListarPorId(id);
+
+            if (clienteDB == null) throw new SystemException("Erro");
+            // throw new NotImplementedException();
+            _bancoContext.Cliente.Remove(clienteDB);
+            _bancoContext.SaveChanges();
+            return true;
+
+        }
     }
 }

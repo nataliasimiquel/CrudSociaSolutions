@@ -1,4 +1,6 @@
-﻿@{
+﻿
+@model ImovelModel
+@{
     ViewData["Title"] = "Excluir";
 }
 
@@ -8,5 +10,5 @@
 </div>
 <form>
     <a type="submit" class="btn btn-primary btn-block" asp-controller="Home" asp-action="Index">Cancelar Exclusão</a>
-    <a type="submit" class="btn btn-danger btn-block" asp-controller="Cliente" asp-action="Excluir">Excluir</a>
+    <a type="submit" class="btn btn-danger btn-block" asp-controller="Cliente" asp-route-id="@Model.Id" asp-action="ExcluirConfirmacao">Excluir</a>
 </form>

@@ -8,7 +8,10 @@ namespace SocialSolucions.Repositorio
 {
     interface IImovelRepositorio
     {
+        ClienteModel ListarPorId(int id);
         List<ImovelModel> BuscarTodos();
         ImovelModel Adicionar(ImovelModel imovel);
+        ImovelModel Editar(ImovelModel imovel);
+        bool ExcluirConfirmacao(int id);
     }
 }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SocialSolucions.Models;
+using SocialSolucions.Repositorio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +10,8 @@ namespace SocialSolucions.Controllers
 {
     public class ImovelController : Controller
     {
+        private readonly IImovelRepositorio _imovelRepositorio;
+
         public IActionResult Index()
         {
             return View();
@@ -24,6 +28,24 @@ namespace SocialSolucions.Controllers
         {
             return View();
         }
+        public IActionResult ExcluirConfirmacao(int id)
+        {
+           // _clienteRepositorio.ExcluirConfirmacao(id);
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult Criar(ImovelModel cliente)
+        {
+            _imovelRepositorio.Adicionar(cliente);
 
+            return RedirectToAction("Index");
+        }
+        [HttpPost] 
+        public IActionResult Editar(ImovelModel cliente)
+        {
+            _imovelRepositorio.Editar(cliente);
+
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -30,9 +30,17 @@ namespace SocialSolucions.Controllers
 
             return View(cliente);
         }
-        public IActionResult Excluir()
+        public IActionResult Excluir(int id)
         {
-            return View();
+            ClienteModel cliente =
+             _clienteRepositorio.ListarPorId(id);
+            return View(cliente);
+        }
+
+        public IActionResult ExcluirConfirmacao(int id)
+        {
+            _clienteRepositorio.ExcluirConfirmacao(id);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]

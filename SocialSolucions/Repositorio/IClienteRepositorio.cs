@@ -12,6 +12,8 @@ namespace SocialSolucions.Repositorio
         List<ClienteModel> BuscarTodos();
         ClienteModel Adicionar(ClienteModel cliente);
         ClienteModel Editar(ClienteModel cliente);
+        bool ExcluirConfirmacao(int id);
+
 
     }
 }
